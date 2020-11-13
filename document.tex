@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+
+
+\renewcommand{\listfigurename}{List of Algorithmes}
+
+\begin{document}
+    
+    \begin{algorithm}
+        \caption{Déterminier  le caractère parfait ou non d'un nombre strictement positif}
+        \SetAlgoVlined
+        \SetKwInOut{Input}{input}
+        \SetKwInOut{Output}{output}
+        \Input{N un entier...}
+        \Output{nombre\textunderscore parfait un boolean}   
+        \tcc{initialisation des deux variable sommediviseur et diviseur de deux varaible entiére}
+        
+        somme\textunderscore diviseur $\leftarrow 0$
+        
+        diviseur $\leftarrow 1$
+        
+          \tcc{calculer la some de diviseur et comparer cetter somme avec le nombre N}
+          
+        \While{diviseur $< N$}{
+            \If{N mod diviseur = 0}{
+                somme\textunderscore diviseur $\leftarrow somme\textunderscore diviseur + diviseur$
+                
+                diviseur $\leftarrow diviseur + 1$
+            }
+        
+        }
+        nombre\textunderscore parfait $\leftarrow (N = somme\textunderscore diviseur )$ $ \wedge (N  \neq 0) $
+        
+        \tcc{retourner le résultat}
+
+        \KwRet{nombre ...}
+        
+        \label{alg:PoEG}        
+        
+    \end{algorithm}
+    
+        \listofalgorithms
+        
+    
+    
+\end{document}
+
